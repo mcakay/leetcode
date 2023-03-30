@@ -32,3 +32,19 @@ public:
     }
     
 };
+
+int main(void)
+{
+	Solution s;
+	vector<int> vec = {2, 7, 11, 15};
+	vector<int> ret = s.twoSum(vec, 9);
+	vector<int>::iterator it = ret.begin();
+	vector<int>::iterator ite = ret.end();
+	while (it != ite)
+	{
+		std::cout << *it << " ";
+		it++;
+	}
+	std::cout << std::endl;
+	return (0);
+}

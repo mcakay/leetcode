@@ -61,3 +61,27 @@ public:
         return ret;
     }
 };
+
+int main(void)
+{
+	Solution s;
+	ListNode *l1 = new ListNode(2);
+	ListNode *l2 = new ListNode(4);
+	ListNode *l3 = new ListNode(3);
+	ListNode *l4 = new ListNode(5);
+	ListNode *l5 = new ListNode(6);
+	ListNode *l6 = new ListNode(4);
+	l1->next = l2;
+	l2->next = l3;
+	l4->next = l5;
+	l5->next = l6;
+	ListNode *ret = s.addTwoNumbers(l1, l4);
+	ListNode *it = ret;
+	while (it != NULL)
+	{
+		std::cout << it->val << " ";
+		it = it->next;
+	}
+	std::cout << std::endl;
+	return (0);
+}
